@@ -18,7 +18,7 @@ gulp.task('build', function() {
 });
 
 /**
- * Compile Front End SCSS
+ * Compile Tailwind
  * 
  * @since 1.0.0
  */
