@@ -89,3 +89,21 @@ gulp.task('js:minify', function() {
  * @since 1.0.0
  */
 gulp.task('js', ['js:minify']);
+
+/**
+ * Default Gulp task
+ * 
+ * @since 1.0.0
+ */
+gulp.task('default', ['css', 'js']);
+
+/**
+ * Dev task
+ * This will run while you're building the theme and automatically compile any changes.
+ * 
+ * @since 1.0.0
+ */
+gulp.task('dev', ['css', 'js'], function() {
+    gulp.watch('./tailwind.config.js', ['css']);
+    gulp.watch('./assets/scripts/**/*.js', ['js']);
+});
