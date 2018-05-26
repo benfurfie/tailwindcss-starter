@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cleanCSS = require('gulp-clean-css'),
     notify = require('gulp-notify'),
+    webpack = require('webpack-stream'),
     tailwindcss = require('tailwindcss');
 
 /**
@@ -68,3 +69,23 @@ gulp.task('css:minify', ['css:compile'], function() {
  * @since 1.0.0
  */
 gulp.task('css', ['css:minify']);
+
+/**
+ * Minify JS
+ * 
+ * @since 1.0.0
+ */
+gulp.task('js:minify', function() {
+    return gulp.src('assets/scripts/main.js')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./js'))
+    .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+/**
+ * Run all JS tasks
+ * 
+ * @since 1.0.0
+ */
+gulp.task('js', ['js:minify']);

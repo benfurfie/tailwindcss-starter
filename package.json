@@ -11,6 +11,8 @@
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
-    "tailwindcss": "^0.5.3"
+    "tailwindcss": "^0.5.3",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "webpack-stream": "^4.0.3"
   }
 }
