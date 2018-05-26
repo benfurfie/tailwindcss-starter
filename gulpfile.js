@@ -30,5 +30,5 @@ gulp.task('css:compile', function() {
         .pipe(rename({
             extname: '.css'
         }))
-        .pipe(gulp.dest('build/'));
+        .pipe(gulp.dest('css/'));
 });
