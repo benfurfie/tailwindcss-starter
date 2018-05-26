@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     tailwindcss = require('tailwindcss');
 
 /**
- * Copy third party libraries from /node_moudles into /vendor
+ * Copy third party libraries from /node_modules into /vendor
  * 
  * @since 1.0.0
  */
